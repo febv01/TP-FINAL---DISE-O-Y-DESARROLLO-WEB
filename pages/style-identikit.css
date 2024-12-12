@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    font-size: 1.2rem;
+}
+
+.about-me, .favorite-series, .favorite-music {
+    margin: 30px 0;
+}
+
+.about-me h2, .favorite-series h2, .favorite-music h2 {
+    margin-bottom: 15px;
+    color: #6a11cb;
+}
+
+.info-table, .series-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.info-table th, .series-table th {
+    background: #6a11cb;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-table td, .series-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.favorite-music iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-movies {
+    margin: 30px 0;
+}
+
+.favorite-movies h2 {
+    margin-bottom: 15px;
+    color: #6a11cb;
+}
+
+.movies-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.movies-table th, .movies-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.movies-table th {
+    background: #6a11cb;
+    color: #fff;
+}
+
+.movies-table td img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movies-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.movies-table td:nth-child(2) {
+    text-align: center;
+}
+
+.favorite-pages {
+    margin: 30px 0;
+    padding: 20px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-pages h2 {
+    margin-bottom: 15px;
+    color: #00796b;
+    text-align: center;
+}
+
+.favorite-pages ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.favorite-pages li {
+    margin: 10px 0;
+}
+
+.favorite-pages a {
+    text-decoration: none;
+    color: #00695c;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.favorite-pages a:hover {
+    color: #004d40;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 5px solid #6a11cb;
+}
+

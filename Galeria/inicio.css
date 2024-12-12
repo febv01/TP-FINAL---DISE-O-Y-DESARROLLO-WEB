@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --blend-color: rgba(46, 61, 102, 0.6);
+    --primary-color: #2E3D66;
+    --secondary-color: #1C253B;
+    --button-color: rgba(255, 255, 255, 0.9);
+    --button-hover-color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./imgs/inicio.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+nav.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 0;
+    z-index: 100;
+    text-align: center;
+}
+
+nav.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.main-nav li {
+    margin: 0 15px;
+}
+
+nav.main-nav li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav.main-nav li a:hover {
+    color: #ddd;
+}
+
+.hero {
+    max-width: 800px;
+    text-align: center;
+    background: var(--blend-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.cta-button {
+    background: var(--button-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--button-hover-color);
+    transform: scale(1.1);
+}

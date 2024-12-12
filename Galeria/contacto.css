@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('./imgs/Contact.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 30;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ddd;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.content-wrapper h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.content-wrapper p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.contact-form button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-form button {
+        font-size: 0.9em;
+    }
+}

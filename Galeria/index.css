@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --blend-color: rgba(46, 61, 102, 0.6);
+    --bullets-color: rgb(255, 255, 255);
+    --primary-color: #2E3D66;
+    --secondary-color: #1C253B;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateX(100%);
+    z-index: 5;
+    
+}
+
+.slide.current {
+    opacity: 1;
+    transform: translateX(0%);
+    z-index: 10;
+}
+
+.slide.exit-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide.exit-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide.enter-left {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.slide.enter-right {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background: var(--blend-color);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-wrapper {
+    position: absolute;
+    bottom: 5em;
+    left: 5em;
+    color: var(--text-color);
+    max-width: 70%;
+}
+
+.slide-title {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.slide-subtitle {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 30;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ddd;
+}
+
+/* Navegación (bullets) */
+#navigation {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.bullet {
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background: var(--bullets-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.bullet.current {
+    opacity: 1;
+}
+
+.bullet:hover {
+    opacity: 0.8;
+}
+
+/* Botones de navegación */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 20;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-btn .arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.left-arrow {
+    border-right: 20px solid rgba(255, 255, 255, 0.8);
+}
+
+.right-arrow {
+    border-left: 20px solid rgba(255, 255, 255, 0.8);
+}
+
+.nav-btn:hover .arrow {
+    border-color: transparent;
+}
+
+.nav-btn:hover .left-arrow {
+    border-right-color: rgba(255, 255, 255, 1);
+}
+
+.nav-btn:hover .right-arrow {
+    border-left-color: rgba(255, 255, 255, 1);
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+@media (max-width: 700px) {
+    .slide-title {
+        font-size: 3em;
+    }
+
+    .slide-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-wrapper {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+
+    .slide-title {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .slide-subtitle {
+        display: none;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        line-height: 1.8;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
+}
+.audio-controls button {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    margin: 0.2em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.audio-controls button:hover {
+    color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.audio-controls button:active {
+    color: rgba(255, 255, 255, 0.6);
+    transform: scale(0.95);
+}

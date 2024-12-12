@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galería</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="./imgs/favicon.png">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="inicio.html">Home</a></li>
+            <li><a href="index.html">Galería</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div id="slider">
+            <!-- Botones de navegación -->
+            <button id="prev" class="nav-btn">
+                <span class="arrow left-arrow"></span>
+            </button>
+            <button id="next" class="nav-btn">
+                <span class="arrow right-arrow"></span>
+            </button>
+
+            <!-- Slides -->
+            <div class="slide current">
+                <div class="slide-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./imgs/Vuelo.jpg" alt="Vuelo">
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="inner-wrapper">
+                            <div class="slide-title">El Engranaje del Vuelo</div>
+                            <div class="audio-controls">
+                                <audio id="audio-vuelo" src="./audios/Vuelo.mp3"></audio>
+                                <button onclick="document.getElementById('audio-vuelo').play()">Play</button>
+                                <button onclick="document.getElementById('audio-vuelo').pause()">Pause</button>                                
+                            </div>
+                            <div class="slide-subtitle">
+                                Una máquina voladora única, impulsada por vapor y engranajes, va por los desiertos en busca de secretos olvidados, fusionando ingeniería y aventura en un mundo steampunk.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./imgs/Her.jpg" alt="Her">
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="inner-wrapper">
+                            <div class="slide-title">Susurros del Alma</div>
+                            <div class="audio-controls">
+                                <audio id="audio-her" src="./audios/Her.mp3"></audio>
+                                <button onclick="document.getElementById('audio-her').play()">Play</button>
+                                <button onclick="document.getElementById('audio-her').pause()">Pause</button>                                
+                            </div>
+                            <div class="slide-subtitle">
+                                Un rostro que se disuelve en pinceladas vibrantes, simbolizando la conexión entre las emociones humanas y el flujo infinito de creatividad. Una representación del equilibrio entre el caos interior y la armonía exterior.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./imgs/Pulp.jpg" alt="Pulp">
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="inner-wrapper">
+                            <div class="slide-title">El Guardián de los Océanos</div>
+                            <div class="audio-controls">
+                                <audio id="audio-pulp" src="./audios/Pulp.mp3"></audio>
+                                <button onclick="document.getElementById('audio-pulp').play()">Play</button>
+                                <button onclick="document.getElementById('audio-pulp').pause()">Pause</button>                               
+                            </div>
+                            <div class="slide-subtitle">
+                                En el corazón de las tormentas, un pulpo gigante emerge como protector de los secretos del mar. Sus tentáculos colosales y ojos brillantes desafían a quienes intentan perturbar el equilibrio natural, recordando que el océano es fuerza y misterio eterno.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./imgs/True.jpg" alt="True">
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="inner-wrapper">
+                            <div class="slide-title">La Verdad Oculta</div>
+                            <div class="audio-controls">
+                                <audio id="audio-true" src="./audios/True.mp3"></audio>
+                                <button onclick="document.getElementById('audio-true').play()">Play</button>
+                                <button onclick="document.getElementById('audio-true').pause()">Pause</button>                               
+                            </div>
+                            <div class="slide-subtitle">
+                                Un rostro envuelto en misterio, con una venda roja que oculta más de lo que revela. Esta obra simboliza la lucha entre la verdad y la percepción, invitando al espectador a cuestionar lo que ven y lo que permanece en la sombra.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./imgs/Waves.jpg" alt="Wave">
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="inner-wrapper">
+                            <div class="slide-title">Ondas Eternas</div>
+                            <div class="audio-controls">
+                                <audio id="audio-waves" src="./audios/Waves.mp3"></audio>
+                                <button onclick="document.getElementById('audio-waves').play()">Play</button>
+                                <button onclick="document.getElementById('audio-waves').pause()">Pause</button>                                
+                            </div>
+                            <div class="slide-subtitle">
+                                Un paisaje de formas fluidas y etéreas que simbolizan el constante movimiento de la naturaleza y el tiempo. Estas ondas nos invitan a contemplar la conexión entre lo infinito y lo esencial, evocando paz y reflexión en su ritmo sereno.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav id="navigation">
+                <div class="bullet current"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </nav>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
